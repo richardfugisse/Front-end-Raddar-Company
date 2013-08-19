@@ -1,0 +1,51 @@
+
+#listagem-cursos{
+	.item{
+		margin-bottom: 32px;
+		.title{
+			.flwc(20px, 25px, 600, #42b0cd);
+		}
+		.text{
+			.f(14px);
+			.lh(23px);
+			.c(#636c75);
+			.m(15px 0);
+		}
+		.button{
+			.transition(.4s);
+			.size(160px, 35px);
+			border-radius: 16px;
+			background: url('../modules/list/cursos/img/btn-arrow.png') no-repeat right 15px center;
+			.flwc(13px, 35px, 400, #fff);
+			.box-sizing(border-box);
+			padding-left: 20px;
+			.block;
+			.pull-left;
+			&.green{
+				.bkgc(#008A4D);
+				margin-right: 20px;
+			}
+			&.red{
+				.bkgc(#B50616);
+			}
+			&:hover{
+				.opacity(0.6);
+			}
+		}
+	}
+	@media (max-width: @screen-md){
+	}
+	@media (max-width: @screen-sm) {
+	}
+	@media (max-width: @screen-xs) {
+		.title{
+			margin-top: 1 px;
+		}
+		.item{
+			.button{
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+

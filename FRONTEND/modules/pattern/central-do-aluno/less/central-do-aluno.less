@@ -1,0 +1,373 @@
+#central-do-aluno{
+	#header{
+		.box-menu-interna {
+			border-top: 1px solid #ebebeb;
+			border-bottom: 1px solid #ebebeb;
+			ul {
+				margin: 0;
+				li {
+					display: inline-block;
+					a {
+						font-size: 14px;
+						.c(#707070);
+						font-weight: 600;
+						padding: 15px 10px;
+						display: inline-block;
+						&:hover, &.active {
+							.c(#221f1f);
+							text-decoration: none;
+							background: url(../modules/pattern/central-do-aluno/img/bkg-menu-internas.png) center bottom no-repeat;
+						}
+						span{
+							display: inline-block;
+						}
+						.icon-cursos {
+							width: 17px;
+							height: 17px;
+							background: url(../modules/pattern/central-do-aluno/img/icon-cursos.png) right center no-repeat;
+						}
+						.icon-cadastro {
+							width: 17px;
+							height: 17px;
+							background: url(../modules/pattern/central-do-aluno/img/icon-cadastro.png) right center no-repeat;
+						}
+						.icon-informativo {
+							width: 17px;
+							height: 17px;
+							background: url(../modules/pattern/central-do-aluno/img/icon-informativo.png) right center no-repeat;
+						}
+						.icon-download {
+							width: 17px;
+							height: 17px;
+							background: url(../modules/pattern/central-do-aluno/img/icon-download.png) right center no-repeat;
+						}
+						.icon-senha {
+							width: 29px;
+							height: 17px;
+							background: url(../modules/pattern/central-do-aluno/img/icon-senha.png) right center no-repeat;
+						}
+						&:hover, &.active {
+							.icon-cursos {
+								background: url(../modules/pattern/central-do-aluno/img/icon-cursos-hover.png) right center no-repeat;
+							}
+							.icon-cadastro {
+								background: url(../modules/pattern/central-do-aluno/img/icon-cadastro-hover.png) right center no-repeat;
+							}
+							.icon-senha {
+								background: url(../modules/pattern/central-do-aluno/img/icon-senha-hover.png) right center no-repeat;
+							}
+							.icon-sair {
+								background: url(../modules/pattern/central-do-aluno/img/icon-sair-hover.png) right center no-repeat;
+							}
+							.icon-informativo {
+								background: url(../modules/pattern/central-do-aluno/img/icon-informativo-hover.png) right center no-repeat;
+							}
+							.icon-download {
+								background: url(../modules/pattern/central-do-aluno/img/icon-download-hover.png) right center no-repeat;
+							}
+						}
+					}
+					&.logout {
+						float: right;
+						.icon-sair {
+							width: 17px;
+							height: 17px;
+							background: url(../modules/pattern/central-do-aluno/img/icon-sair.png) right center no-repeat;
+						}
+					}
+				}
+			}
+		}
+	}
+	#formulario{
+		.box-news {
+			.title {
+				margin: 20px 0 0 0;
+			}
+			label {
+				margin: 10px 0 0 0;
+			}
+			.box-radio {
+				padding: 0;
+				width: 50%;
+				float: left;
+				margin: 10px 0 3px 0;
+				.c(#221f1f);
+				input {
+					float: left;
+					width: 20px;
+					height:  20px;
+					margin: 0;
+				}
+			}
+		}
+	}
+	#meus-cursos, #downloads {
+		.top-cursos {
+			font-size: 16px;
+			.c(#221f1f);
+			font-weight: 600;
+		}
+		.cursos {
+			font-size: 13px;
+			.c(#232323);
+			.field{
+				border-left: 2px solid #221f1f;
+				//padding: 10px 0 10px 10px;
+				padding: 10px 0;
+				background: #efefef;
+				&:nth-child(even) {
+					background: #f6f6f6;
+				}
+			}
+			.label {
+				padding: 5px 15px;
+				.box-sizing(border-box);
+				.border-radius(15px);
+				text-shadow: none;
+				font-weight: 500;
+				font-size: 10px;
+				.c(#fefefe);
+				display: inline-block;
+			}
+			.aguardando {
+				background: #e2772f;
+			}
+			.refazer {
+				background: #6493f3;
+			}
+			.confirmado {
+				background: #008c44;
+			}
+			.cancelado {
+				background: #c33f3f;
+			}
+			.tipo{
+				.f(14px);
+				.fw(600);
+				&.pos{
+					.c(#d47918);
+				}
+				&.treinamento{
+					.c(#129181);
+				}
+				&.bls{
+					.c(#eb5874);
+				}
+			}
+			.data{
+				.c(#686868);
+			}
+		}
+		.download{
+			.block;
+			background: url('../modules/pattern/central-do-aluno/img/icon-download-blue.png') no-repeat 115px center;
+			padding-right: 30px;
+			span{
+				border-bottom: 1px solid #C6D7EA;
+			}
+			&:hover{
+				text-decoration: none;
+				.opacity(.5);
+			}
+		}
+		.item{
+			&:nth-child(even) {
+				.field{
+					background: #f6f6f6;
+				}
+			}
+		}
+		.downloads{
+			display: none;
+			padding-left: 20px;
+			.field{
+				border: none;
+				padding-left: 15px;
+				background: #f6f6f6;
+				.m(2px 0);
+				&:nth-child(even){
+					background: #efefef;
+				}
+				a{
+					.block;
+					padding-left: 30px;background: url('../modules/pattern/central-do-aluno/img/icon-download-blue.png') no-repeat left center;
+				}
+			}
+		}
+		@media (max-width: @screen-sm) {
+			.field{
+				> div{
+					padding-top: 5px;
+					padding-bottom: 5px;
+				}
+			}
+		}
+	}
+	#login{
+		.box-form .divisao-form {
+		  background: #f1f1f1;
+		  padding: 30px;
+		}
+		.box-form .divisao-form p {
+		  font-size: 13px;
+		  .c(#58616A);
+		  .lh(23px);
+		}
+		.box-form .divisao-form p strong {
+		  font-size: 20px;
+		  font-weight: bold;
+		  line-height: 29px;
+		  .c(#000);
+		}
+		.box-form .divisao-form form input {
+		  padding: 15px 15px 15px 35px;
+		  border: none;
+		  color: #8c9bad;
+		  background: #fff;
+		  border-radius: 6px;
+		  .box-shadow(none);
+		}
+		.box-form .divisao-form form .email-form {
+		  background: #fff url(../modules/pattern/central-do-aluno/img/icon-email.png) left 10px center no-repeat;
+		  margin: 10px 0 15px 0;
+		}
+		.box-form .divisao-form form .senha-form {
+		  background: #fff url(../modules/pattern/central-do-aluno/img/icon-password.png) left 10px center no-repeat;
+		}
+		.box-form .divisao-form form input[type="submit"] {
+		  background: #000;
+		  padding: 15px 0;
+		  border: none;
+		  border-radius: 3px;
+		  color: #fff;
+		  .m(10px 0 20px 0);
+		  font-weight: bold;
+		  font-size: 16px;
+		  font-weight: 600;
+		  .transition(.4s);
+		  .box-sizing(border-box);
+			&:hover{
+				.opacity(0.6);	
+			}
+		}
+		.link-cadastrar{
+			.block;
+			.size(100%, 50px);
+			.border-radius(3px);
+			background-color: #e13a3a;
+			.t-center;
+			.flwc(18px, 50px, 400, #fff);
+			.m(24px 0);
+		}
+		@media (max-width: @screen-sm) {
+			.box-form .divisao-form {
+				margin-bottom: 20px;
+			}
+		}
+	}
+	.title {
+		h2 {
+			font-size: 14px;
+			.c(#221f1f);
+			font-weight: bold;
+		}
+	}
+	form {
+		margin: 40px 0 0 0;
+		div.selector{
+			.size(100%, 34px);
+			.pull-left;
+			border: none;
+			.border-radius(0);
+			.p(0);
+			.m(0 0 15px 0);
+			.bkgc(#ffffeb);
+			border: 1px solid #e3e2e2;
+			select{
+				.m(-59px 0 0 0);
+				.size(100%, 34px);
+				.c(#555);
+				.f(14px);
+				.lh(30px);
+				background: #fff;
+			}
+			span{
+				.block;
+				.t-left;
+				.f(13px);
+				.c(#303030);
+				.size(100%, auto) !important;
+				text-shadow: none;
+				text-indent: 15px;
+				.p(7px 0);
+				background: url(../img/uniform/select.png) right center no-repeat;
+			}
+		}
+		.divisao {
+			padding: 30px;
+			margin: 0 0 20px 0;
+			background: #f1f1f1;
+			.title {
+				margin: 0 0 15px 0;
+				h2 {
+					margin: 0;
+					font-size: 16px;
+					.c(#221f1f);
+					line-height: 25px;
+				}
+			}
+			label {
+				font-size: 13px;
+				font-weight: 600;
+				.c(#8c9bad);
+			}
+			input {
+				.size(100%, 34px);
+				.pull-left;
+				border: 1px solid #e3e2e2;
+				.border-radius(0);
+				.p(0 10px);
+				.m(0 0 15px 0);
+				.bkgc(#fff);
+				font-size: 13px;
+				.c(#221f1f);
+				box-shadow: none;
+				&:hover {
+					background: #ffffeb;
+				}
+			}
+		}
+	}
+	.link.attCadastro {
+		.size(169px, 35px);
+		.border-radius(16px);
+		background: #008943 url(../modules/pattern/central-do-aluno/img/att-cadastro.png) right 10px center no-repeat;
+		border: none;
+		.c(#fff);
+		.f(13px);
+		.p(0 20px 0 10px);
+		&:hover {
+			text-decoration: none;
+			background-color: #02783c;
+		}
+	}
+	.sucess {
+		background: #399ed8;
+		.border-radius(6px);
+		padding: 15px;
+		.c(#fff);
+		margin: 5px 0 0 0;
+		a {
+			.c(#fff);
+			text-decoration: underline;
+		}
+	}
+	.erro {
+		margin: 5px 0 0 0;
+		background: #db0606;
+		.c(#fff);
+		padding: 15px;
+		.border-radius(6px);
+	}
+}

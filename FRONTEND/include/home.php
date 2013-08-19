@@ -1,0 +1,1 @@
+<?php include "modules/gallery/some-thumb-6/some-thumb-6.php";?>
