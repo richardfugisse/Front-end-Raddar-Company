@@ -1,25 +1,38 @@
 #central-do-aluno{
+	header.central{
+		border-bottom: 1px solid #ebebeb;
+		border-top: 1px solid #ebebeb;
+		.p(15px 0);
+		.c(#221f1f);
+		.fw(600);
+		.f(16px);
+		.m(15px 0);
+	}
 	#header{
 		.box-menu-interna {
 			border-top: 1px solid #ebebeb;
 			border-bottom: 1px solid #ebebeb;
+			margin-bottom: 20px;
 			ul {
-				margin: 0;
+				.reset;
 				li {
 					display: inline-block;
 					a {
 						font-size: 14px;
 						.c(#707070);
+						.transition(.4s ease-out);
 						font-weight: 600;
 						padding: 15px 10px;
 						display: inline-block;
+						background: url(../modules/pattern/central-do-aluno/img/bkg-menu-internas.png) center 100px no-repeat;
 						&:hover, &.active {
 							.c(#221f1f);
 							text-decoration: none;
-							background: url(../modules/pattern/central-do-aluno/img/bkg-menu-internas.png) center bottom no-repeat;
+							background-position: center bottom;
 						}
 						span{
 							display: inline-block;
+							.transition(.4s);
 						}
 						.icon-cursos {
 							width: 17px;
@@ -129,6 +142,10 @@
 				font-size: 10px;
 				.c(#fefefe);
 				display: inline-block;
+				.transition(.3s);
+				&:hover{
+					.opacity(.8);
+				}
 			}
 			.aguardando {
 				background: #e2772f;
@@ -161,10 +178,11 @@
 		}
 		.download{
 			.block;
-			background: url('../modules/pattern/central-do-aluno/img/icon-download-blue.png') no-repeat 115px center;
+			background: url('../modules/pattern/central-do-aluno/img/icon-download-blue.png') no-repeat 100px center;
 			padding-right: 30px;
 			span{
 				border-bottom: 1px solid #C6D7EA;
+				.f(11px);
 			}
 			&:hover{
 				text-decoration: none;
@@ -172,6 +190,7 @@
 			}
 		}
 		.item{
+			overflow: hidden;
 			&:nth-child(even) {
 				.field{
 					background: #f6f6f6;
@@ -206,47 +225,47 @@
 	}
 	#login{
 		.box-form .divisao-form {
-		  background: #f1f1f1;
-		  padding: 30px;
+			background: #f1f1f1;
+			padding: 30px;
 		}
 		.box-form .divisao-form p {
-		  font-size: 13px;
-		  .c(#58616A);
-		  .lh(23px);
+			font-size: 13px;
+			.c(#58616A);
+			.lh(23px);
 		}
 		.box-form .divisao-form p strong {
-		  font-size: 20px;
-		  font-weight: bold;
-		  line-height: 29px;
-		  .c(#000);
+			font-size: 20px;
+			font-weight: bold;
+			line-height: 29px;
+			.c(#000);
 		}
 		.box-form .divisao-form form input {
-		  padding: 15px 15px 15px 35px;
-		  border: none;
-		  color: #8c9bad;
-		  background: #fff;
-		  border-radius: 6px;
-		  .box-shadow(none);
+			padding: 15px 15px 15px 35px;
+			border: none;
+			color: #8c9bad;
+			background: #fff;
+			border-radius: 6px;
+			.box-shadow(none);
 		}
 		.box-form .divisao-form form .email-form {
-		  background: #fff url(../modules/pattern/central-do-aluno/img/icon-email.png) left 10px center no-repeat;
-		  margin: 10px 0 15px 0;
+			background: #fff url(../modules/pattern/central-do-aluno/img/icon-email.png) left 10px center no-repeat;
+			margin: 10px 0 15px 0;
 		}
 		.box-form .divisao-form form .senha-form {
-		  background: #fff url(../modules/pattern/central-do-aluno/img/icon-password.png) left 10px center no-repeat;
+			background: #fff url(../modules/pattern/central-do-aluno/img/icon-password.png) left 10px center no-repeat;
 		}
 		.box-form .divisao-form form input[type="submit"] {
-		  background: #000;
-		  padding: 15px 0;
-		  border: none;
-		  border-radius: 3px;
-		  color: #fff;
-		  .m(10px 0 20px 0);
-		  font-weight: bold;
-		  font-size: 16px;
-		  font-weight: 600;
-		  .transition(.4s);
-		  .box-sizing(border-box);
+			background: #000;
+			padding: 15px 0;
+			border: none;
+			border-radius: 3px;
+			color: #fff;
+			.m(10px 0 20px 0);
+			font-weight: bold;
+			font-size: 16px;
+			font-weight: 600;
+			.transition(.4s);
+		 	.box-sizing(border-box);
 			&:hover{
 				.opacity(0.6);	
 			}
@@ -259,6 +278,11 @@
 			.t-center;
 			.flwc(18px, 50px, 400, #fff);
 			.m(24px 0);
+			text-decoration: none!important;
+			.transition(.4s);
+			&:hover{
+				.opacity(.8);
+			}
 		}
 		@media (max-width: @screen-sm) {
 			.box-form .divisao-form {
@@ -274,7 +298,7 @@
 		}
 	}
 	form {
-		margin: 40px 0 0 0;
+		margin: 10px 0 0 0;
 		div.selector{
 			.size(100%, 34px);
 			.pull-left;
@@ -284,8 +308,10 @@
 			.m(0 0 15px 0);
 			.bkgc(#ffffeb);
 			border: 1px solid #e3e2e2;
+			.relative;
 			select{
-				.m(-59px 0 0 0);
+				.absolute;
+				top:0;
 				.size(100%, 34px);
 				.c(#555);
 				.f(14px);
@@ -321,6 +347,10 @@
 				font-size: 13px;
 				font-weight: 600;
 				.c(#8c9bad);
+				span{
+					.f(11px);
+					.c(#464646);
+				}
 			}
 			input {
 				.size(100%, 34px);
@@ -339,14 +369,20 @@
 			}
 		}
 	}
+	a.login{
+		.pull-right;
+		background: url(../modules/pattern/central-do-aluno/img/icon-lock.png) right center no-repeat;
+		.block;
+		padding-right: 25px;
+		.c(#546179);
+	}
 	.link.attCadastro {
-		.size(169px, 35px);
 		.border-radius(16px);
-		background: #008943 url(../modules/pattern/central-do-aluno/img/att-cadastro.png) right 10px center no-repeat;
+		background: #008943 url(../modules/pattern/central-do-aluno/img/att-cadastro.png) right 10px center  no-repeat;
 		border: none;
 		.c(#fff);
 		.f(13px);
-		.p(0 20px 0 10px);
+		.p(10px 30px 10px 15px);
 		&:hover {
 			text-decoration: none;
 			background-color: #02783c;
@@ -357,6 +393,7 @@
 		.border-radius(6px);
 		padding: 15px;
 		.c(#fff);
+		.f(13px);
 		margin: 5px 0 0 0;
 		a {
 			.c(#fff);

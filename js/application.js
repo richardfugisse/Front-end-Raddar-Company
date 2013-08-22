@@ -3,7 +3,76 @@
 		var  URLpath = $('[name="baseUrl"]').val();
 		var $window = $(window);
 		var $body   = $(document.body);
-
+		// HEADER INSIDE
+		if(!$('#index')[0]){
+			$('#header').addClass('inside');
+		}
+		if($('.sliders')[0]){
+			yepnope([{
+				load: [
+					URLpath+'js/plugins/royalslider/jquery.royalslider.min.js',
+					URLpath+'css/plugins/royalslider/royalslider.css',
+					URLpath+'css/plugins/royalslider/skins/minimal-white/rs-minimal-white.css'
+				],
+				complete: function () {
+					$('.sliders').royalSlider({
+						autoHeight: true,
+						arrowsNav: false,
+						fadeinLoadedSlide: true,
+						imageScaleMode: 'none',
+						controlNavigationSpacing: 0,
+						controlNavigation: 'bullets',
+						imageScaleMode: 'none',
+						imageAlignCenter:false,
+						loop: true,
+						loopRewind: true,
+						transitionType: 'fade',
+						numImagesToPreload: 6,
+						keyboardNavEnabled: true,
+						usePreloader: false
+					});
+				}
+			}]);
+		}
+		if(($('#gallery-1').length!=0)){
+			yepnope([{
+				load: [
+					URLpath+'js/plugins/royalslider/jquery.royalslider.min.js',
+					URLpath+'css/plugins/royalslider/royalslider.css',
+					URLpath+'css/plugins/royalslider/skins/default/rs-default.css'
+				],
+				complete: function () {
+					$('#gallery-1').royalSlider({
+					    fullscreen: {
+					      enabled: false,
+					      nativeFS: true
+					    },
+					    controlNavigation: 'thumbnails',
+					    autoScaleSlider: false, 
+					    autoScaleSliderWidth: 940,     
+					    autoScaleSliderHeight: 498,
+					    loop: false,
+					    imageScaleMode: 'none',
+					    navigateByClick: true,
+					    numImagesToPreload:2,
+					    arrowsNav:true,
+					    arrowsNavAutoHide: true,
+					    arrowsNavHideOnTouch: true,
+					    keyboardNavEnabled: true,
+					    fadeinLoadedSlide: true,
+					    globalCaption: true,
+					    globalCaptionInside: false,
+					    thumbs: {
+					      appendSpan: true,
+					      firstMargin: false,
+					      spacing: 20,
+					      drag: false,
+					      autoCenter: false
+					    }
+					  });
+				}
+			}]);
+		}
 		// CENTRAL DO ALUNO
 		if(($('#central-do-aluno').length!=0)){
 			if( $('form select')[0] ){
@@ -86,5 +155,33 @@
 		        }
 		    }]);
 		}
-	})
+		if(($('.validacao').length!=0)){
+		    yepnope([{
+		        load:[
+		            URLpath+'js/libs/validacao.js'
+		        ],
+		        complete: function () {
+		            validacao();
+		            console.log(1);
+		        }
+		    }]);
+		}
+		//FACEBOOK LIKE
+		(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+		//PLUS BUTTON
+		 (function() {
+		    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+		    po.src = 'https://apis.google.com/js/plusone.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+		  })();
+	});
+
+	
+	
 }(window.jQuery)

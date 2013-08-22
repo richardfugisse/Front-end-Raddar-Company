@@ -1,0 +1,42 @@
+#thumb-bottom{
+	#gallery-1 {
+	  width: 100%;
+	  height: 625px!important;
+	  -webkit-user-select: none;
+	  -moz-user-select: none;  
+	  user-select: none;
+	  .m(40px 0);
+	  .rsOverflow{
+	  	background: transparent!important;
+	  }
+	  .rsThumbsHor {
+	  	height: 109px!important;
+	  }
+	}
+	.rsDefault .rsThumb{
+		width: 140px;
+		height: 109px!important;
+	}
+	.rsDefault .rsArrowIcn {
+		width: 28px;
+		height: 57px;
+		top: 50%;
+		left: 50%;
+		margin-top: -24px;
+		margin-left: -16px;
+		position: absolute;
+		cursor: pointer;
+		background: url('rs-default.png');
+		background-color: none;
+		border-radius: 2px;
+	}
+	.rsDefault.rsHor .rsArrowLeft .rsArrowIcn {
+		background: url('../modules/gallery/thumb-bottom/img/left-gallery.png');
+	}
+	.rsDefault.rsHor .rsArrowRight .rsArrowIcn {
+		background: url('../modules/gallery/thumb-bottom/img/right-arrow.png');
+	}
+	.rsDefault .rsThumb.rsNavSelected {
+		background: #FFF;
+	}
+}

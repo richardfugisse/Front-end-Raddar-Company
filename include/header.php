@@ -27,7 +27,7 @@
 
 	<!--CSS-->
 	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+	<link rel="stylesheet/less" type="text/css" href="less/bootstrap.less"/>
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
 	  <script src="js/html5shiv.js"></script>
@@ -36,7 +36,7 @@
 	<![endif]-->
 
 	<!-- MAIN JS -->
-
+	<script src="js/libs/less.js"></script>
 	<!-- Favicons -->
 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
